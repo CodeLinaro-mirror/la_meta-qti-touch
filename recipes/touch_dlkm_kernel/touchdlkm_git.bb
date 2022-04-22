@@ -7,7 +7,7 @@ inherit linux-kernel-base
 
 PR = "r0"
 
-DEPENDS = "rsync-native"
+DEPENDS = "rsync-native displaydlkm"
 
 do_configure[depends] += "virtual/kernel:do_shared_workdir"
 
