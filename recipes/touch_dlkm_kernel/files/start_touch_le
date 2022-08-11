@@ -67,7 +67,6 @@ case "$1" in
     start)
 	echo -n "Starting/Loading touch module: "
 
-	echo "touch:start/load" > /dev/kmsg
 	insmod $MODULE_BASE/goodix_ts.ko
 
 	echo "done loading touch_kernel module"
