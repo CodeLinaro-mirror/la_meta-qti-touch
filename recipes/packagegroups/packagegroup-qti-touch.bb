@@ -12,7 +12,7 @@ PACKAGES = ' \
     packagegroup-qti-touch \
     '
 
-RDEPENDS_packagegroup-qti-touch = ' \
-    touchdlkm \
+RDEPENDS:packagegroup-qti-touch = ' \
+    touch-for-linuxdlkm \
     '
 
