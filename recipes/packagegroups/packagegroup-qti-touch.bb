@@ -12,8 +12,8 @@ PACKAGES = ' \
     packagegroup-qti-touch \
     '
 
-LE_VERSION_DIFF="${@bb.utils.contains("KERNEL_MODULES_LIST", "modules.list.msm.kalama.le", ":", "_", d)}"
+LE_VERSION_DIFF="${@bb.utils.contains("KERNEL_MODULES_LIST", "modules.list.msm.kalama.lu", ":", "_", d)}"
 
 RDEPENDS${LE_VERSION_DIFF}packagegroup-qti-touch = ' \
-    ${@bb.utils.contains("KERNEL_MODULES_LIST", "modules.list.msm.kalama.le", "touch-for-linuxdlkm", "touchdlkm", d)} \
+    ${@bb.utils.contains("KERNEL_MODULES_LIST", "modules.list.msm.kalama.lu", "touch-for-linuxdlkm", "touchdlkm", d)} \
     '
