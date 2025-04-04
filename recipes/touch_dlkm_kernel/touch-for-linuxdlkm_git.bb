@@ -58,6 +58,7 @@ do_install() {
 	install -d ${D}${systemd_unitdir}/system/multi-user.target.wants/
 	install -m 755 ${WORKDIR}/start_touch_le ${D}${sysconfdir}/initscripts
 	install -d ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}
+	install -m 0755 ${WORKDIR}/vendor/qcom/opensource/touch-drivers/qts.ko -D ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}
 	install -m 0755 ${WORKDIR}/vendor/qcom/opensource/touch-drivers/goodix_ts.ko -D ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}
 	install -m 0755 ${WORKDIR}/vendor/qcom/opensource/touch-drivers/atmel_mxt_ts.ko -D ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}
 	install -m 0644 ${WORKDIR}/touch.service -D ${D}${systemd_unitdir}/system/touch.service
