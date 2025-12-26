@@ -33,6 +33,7 @@ PARALLEL_MAKE = "-j1"
 LD_PATH = "${@oe.utils.conditional('KERNEL_TOOLS_USES_MUSLC', 'True', "${LD_PATH_MUSLC}", "${LD_PATH_GLIBC}", d)}"
 
 do_compile[lockfiles] = "${TMPDIR}/build_modules.lock"
+do_compile[network] = "1"
 
 do_configure() {
         cp -f ${WORKSPACE}/vendor/qcom/opensource/touch-drivers/Makefile.am ${WORKSPACE}/vendor/qcom/opensource/touch-drivers/Makefile
