@@ -7,7 +7,11 @@ inherit linux-kernel-base deploy
 PR = "r0"
 PV = "2.0+git"
 
-DEPENDS = "rsync-native displaydlkm"
+#DEPENDS = "rsync-native displaydlkm"
+
+#####Add for DDK
+DDK_BUILD ?= "false"
+DEPENDS += "${@bb.utils.contains('DDK_BUILD', 'false', 'rsync-native displaydlkm', '', d)}"
 
 do_configure[depends] += "virtual/kernel:do_shared_workdir"
 
