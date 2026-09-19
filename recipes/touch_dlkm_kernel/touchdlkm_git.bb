@@ -20,7 +20,7 @@ SRC_URI    +=  "file://touch.service"
 SRC_URI    +=  "file://touch_load.conf"
 KERNEL_VERSION = "${@get_kernelversion_file("${STAGING_KERNEL_BUILDDIR}")}"
 
-S = "${WORKDIR}/vendor/qcom/opensource/touch-drivers"
+S = "${UNPACKDIR}/vendor/qcom/opensource/touch-drivers"
 
 EXTRA_OEMAKE += "TARGET_SUPPORT=${BASEMACHINE}"
 

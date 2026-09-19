@@ -17,7 +17,7 @@ SRC_URI    +=  "file://start_touch_le"
 SRC_URI    +=  "file://touch.service"
 SRC_URI    +=  "file://touch_load.conf"
 
-S = "${WORKDIR}/vendor/qcom/opensource/touch-drivers"
+S = "${UNPACKDIR}/vendor/qcom/opensource/touch-drivers"
 
 EXTRA_OEMAKE += "TARGET_SUPPORT=${BASEMACHINE}"
 
